@@ -9,8 +9,8 @@ export default function Profile() {
                 <div className="profile-details">
                     <div className="colz">
                         <div className="colz-icon">
-                        <a href="https://www.facebook.com/aly.williams.351">
-                            <i className="fa fa-facebook-square"></i>
+                        <a href="https://github.com/alysonrwilliams">
+                            <i className="fa fa-github"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/alyson-williams-mpa">
                             <i className="fa fa-linkedin"></i>
@@ -18,8 +18,8 @@ export default function Profile() {
                         <a href="https://www.instagram.com/howdy_aly/">
                             <i className="fa fa-instagram"></i>
                         </a>
-                        <a href="https://twitter.com/howdy_aly">
-                            <i className="fa fa-twitter"></i>
+                        <a href="https://www.facebook.com/aly.williams.351">
+                            <i className="fa fa-facebook-square"></i>
                         </a>
                         </div>
                     </div>
@@ -38,15 +38,13 @@ export default function Profile() {
                             <Typical
                             loop={Infinity}
                             steps={[
-                                "Problem Solver 💡", 
-                                1000,
-                                "HTML/CSS 💡", 
-                                1000,
-                                "React 💡", 
+                                "Front End Developer 💡", 
                                 1000,
                                 "Javascript 💡", 
                                 1000,
-                                "Front End Developer 💡", 
+                                "React 💡", 
+                                1000,
+                                "Problem Solver 💡", 
                                 1000
                             ]}
                             />

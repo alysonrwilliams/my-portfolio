@@ -34,7 +34,7 @@
 }
 
 .highlighted-text {
-  color: var(--dark-orange);
+  color: #a79999;
 }
 
 .profile-role-tagline {
@@ -50,7 +50,7 @@
 .profile-options .highlighted-btn:hover {
   margin: 0 0 0 28px;
   background-color: cornsilk;
-  background: #111;
+  background: #a79999;
 }
 
 .profile-picture {
