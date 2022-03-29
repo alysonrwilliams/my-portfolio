@@ -42,12 +42,12 @@ export default function Header() {
     }*/
 
     const getHeaderOptionsClasses = (index) => {
-        let classes = "header-option";
+        let classes = "header-option ";
         if(index < TOTAL_SCREENS.length -1)
-        classes += "header-option-seperator";
+        classes += "header-option-seperator ";
 
         if (selectedScreen === index)
-        classes += "selected-header-option";
+        classes += "selected-header-option ";
 
         return classes;
     };
@@ -62,10 +62,30 @@ export default function Header() {
         setShowHeaderOptions(false);
     };
 
-
-
-
     return (
+        <div>
+            <div className="header-container" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
+                <div className="header-parent">
+
+                    <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
+                        <FontAwesomeIcon className="header-hamburger-bars" icon={faBars}/>
+                    </div>
+
+                    <div className="header-logo">
+                        <img src={require('../../../assets/home/mylogo.png')} alt="logo" />
+                    </div>
+
+                    
+                    <div className={showHeaderOptions ? "header-options show-hamburger-options" : "header-options"}>
+                        {getHeaderOptions()}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+ /*return (
         <div
           className="header-container"
           onClick={() => setShowHeaderOptions(!showHeaderOptions)}
@@ -93,32 +113,5 @@ export default function Header() {
           </div>
         </div>
       );
-    }
+    }*/
     
-
-
-
-
-
-    /*return (
-        <div>
-            <div className="header-container" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
-                <div className="header-parent">
-
-                    <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
-                        <FontAwesomeIcon className="header-hamburger-bars" icon={faBars}/>
-                    </div>
-
-                    <div className="header-logo">
-                        <img src={require('../../../assets/home/mylogo.png')} alt="logo" />
-                    </div>
-
-                    
-                    <div className={showHeaderOptions ? "header-options show-hamburger-options" : "header-options"}>
-                        {getHeaderOptions()}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}*/
