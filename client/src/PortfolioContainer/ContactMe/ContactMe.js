@@ -49,6 +49,8 @@ export default function ContactMe(props) {
                 steps={[
                     "Get in Touch 💻",
                     1000,
+                    "Reach Out 🤝",
+                    1000,
                 ]}
                 />
             </h2>

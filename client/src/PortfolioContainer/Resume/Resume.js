@@ -46,11 +46,11 @@ const ResumeHeading = (props) => {
 
     /* STATIC RESUME DATA FOR THE LABELS*/
     const resumeBullets = [
-        {label: "Education", logoSrc: "education.svg"},
-        {label: "Work History", logoSrc: "work-history.svg"},
-        {label: "Programming Skills", logoSrc: "programming-skills.svg"},
-        {label: "Projects", logoSrc: "projects.svg"},
-        {label: "Interests", logoSrc: "interests.svg"}
+        { label: "Education", logoSrc: "education.svg" },
+        { label: "Work History", logoSrc: "work-history.svg" },
+        { label: "Programming Skills", logoSrc: "programming-skills.svg" },
+        { label: "Projects", logoSrc: "projects.svg" },
+        { label: "Interests", logoSrc: "interests.svg" }
     ];
 
     const programmingSkillsDetails = [
@@ -215,21 +215,22 @@ const ResumeHeading = (props) => {
         setSelectedBulletIndex(index);
       };
 
+
       const getBullets = () => {
         return resumeBullets.map((bullet, index) => (
           <div
             onClick={() => handleCarousal(index)}
             className={
-              index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
-            }
+              index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
             key={index}
           >
-              <img className="bullet-logo"
-              src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-              alt="b"
-              />
-              <span className="bullet-label">{bullet.label}</span>
-              </div>
+            <img
+              className="bullet-logo"
+              src={require(`../../assets/Resume/${bullet.logoSrc}`)}
+              alt="B"
+            />
+            <span className="bullet-label">{bullet.label}</span>
+          </div>
         ));
       };
 
@@ -244,9 +245,17 @@ const ResumeHeading = (props) => {
     );
   };
 
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
 
     return (
-        <div className="resume-container screen-container" id={props.id || ""}>
+        <div className="resume-container screen-container" 
+        id={props.id || ""}
+        >
             <div className="resume-content">
                 <ScreenHeading title={'Resume'} subHeading={'My Formal Bio Details'} />
                 <div className="resume-card">
@@ -256,6 +265,7 @@ const ResumeHeading = (props) => {
                             <div className="bullets">{getBullets()}</div>
                         </div>
                     </div>
+
                     <div className="resume-bullet-details">{getResumeScreens()}</div>
                 </div>
             </div>
