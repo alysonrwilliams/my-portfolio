@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Typical from "react-typical";
+import "./ContactMe.css";
 
 import imgBack from '../../../src/images/mail.png';
 import load1 from '../../../src/images/load2.gif';
@@ -46,9 +47,7 @@ export default function ContactMe(props) {
                 <Typical
                 loop={Infinity}
                 steps={[
-                    "Get in Touch 📲",
-                    "Let's Talk 📞",
-                    "Message Me 💻",
+                    "Get in Touch 💻",
                     1000,
                 ]}
                 />
