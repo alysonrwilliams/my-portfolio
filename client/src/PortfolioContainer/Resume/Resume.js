@@ -3,44 +3,48 @@ import ScreenHeading
 from '../../utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
+import "./Resume.css";
 
-export default function Resume(props) {
+const Resume = (props) => {
+    /* STATES */
     const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
     const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
-
+  
     let fadeInScreenHandler = (screen) => {
-        if (screen.fadeInScreen !== props.id) return;
-        Animations.animations.fadeInScreen(props.id);
+      if (screen.fadeInScreen !== props.id) return;
+  
+      Animations.animations.fadeInScreen(props.id);
     };
     const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+      ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-    const ResumeHeading = (props) => {
-        return(
-        <div className="resume-heading">
-            <div className="resume-main-heading">
-                <div className="heading-bullet">
-                    <span>{props.heading ? props.heading : ''}</span>
-                    {props.fromDate && props.toDate ?(
-                        <div className="heading-date">
-                            {props.fromDate + "_" + props.toDate}
-                        </div>
-                    ): (
-                        <div></div>
-                    )}
-                </div>
-                <div className="resume-sub-heading">
-                    <span>{props.subHeading ? props.subHeading : ''}</span>
-                </div>
-                <div className="resume-heading-description">
-                    <span>{props.description ? props.description : ""}</span>
-                </div>
+
+/* REUSABLE COMPONENTS */
+const ResumeHeading = (props) => {
+    return (
+      <div className="resume-heading">
+        <div className="resume-main-heading">
+          <div className="heading-bullet"></div>
+          <span>{props.heading ? props.heading : ""}</span>
+          {props.fromDate && props.toDate ? (
+            <div className="heading-date">
+              {props.fromDate + "-" + props.toDate}
             </div>
+          ) : (
+            <div></div>
+          )}
         </div>
-        )
-        
-    };
+        <div className="resume-sub-heading">
+          <span>{props.subHeading ? props.subHeading : ""}</span>
+        </div>
+        <div className="resume-heading-description">
+          <span>{props.description ? props.description : ""}</span>
+        </div>
+      </div>
+    );
+  };
 
+    /* STATIC RESUME DATA FOR THE LABELS*/
     const resumeBullets = [
         {label: "Education", logoSrc: "education.svg"},
         {label: "Work History", logoSrc: "work-history.svg"},
@@ -50,13 +54,13 @@ export default function Resume(props) {
     ];
 
     const programmingSkillsDetails = [
-        {skill:"JavaScript", ratingPercentage: 75},
-        {skill:"React JS", ratingPercentage: 75},
-        {skill:"Node JS", ratingPercentage: 75},
-        {skill:"C#", ratingPercentage: 50},
-        {skill:"HTML", ratingPercentage: 90},
-        {skill:"CSS", ratingPercentage: 70},
-        {skill:"Git", ratingPercentage: 80},
+        {skill: "JavaScript", ratingPercentage: 70},
+        {skill: "React JS", ratingPercentage: 70},
+        {skill: "Node JS", ratingPercentage: 70},
+        {skill: "C#", ratingPercentage: 50},
+        {skill: "HTML", ratingPercentage: 90},
+        {skill: "CSS", ratingPercentage: 75},
+        {skill: "Git", ratingPercentage: 85},
     ];
 
     const projectDetails = [
@@ -89,7 +93,7 @@ export default function Resume(props) {
             duration: {fromDate: "2019", toDate: "2021"},
             description: "A website for my freelance business, UpFrnt Web Development",
             subHeading: "Technologies Used: HTML, CSS, Javascript, Bootstrap",
-        }
+        },
     ];
 
     const resumeDetails = [
@@ -98,69 +102,77 @@ export default function Resume(props) {
             heading={"Code Louisville"}
             subHeading={"Bootcamp Graduate, Front End Development"}
             fromDate={"2020"}
-            toDate={"2021"} />
+            toDate={"2021"} 
+            />
 
             <ResumeHeading
             heading={"Code Louisville"}
             subHeading={"Bootcamp Graduate, Javascript II"}
             fromDate={"2021"}
-            toDate={"2021"} />
+            toDate={"2021"} 
+            />
 
             <ResumeHeading 
             heading={"Code Louisville"}
             subHeading={"Bootcamp Graduate, C#"}
             fromDate={"2021"}
-            toDate={"2022"} />
+            toDate={"2022"} 
+            />
 
             <ResumeHeading
             heading={"Kentucky State University"}
             subHeading={"MPA, Master of Public Administration"}
             fromDate={"2015"}
-            toDate={"2017"}/>
+            toDate={"2017"}
+            />
         </div>,
+
+        /* Work Experience */
         <div className="resume-screen-container" key="work-experience">
+            <div className="experience-container">
             <ResumeHeading
             heading={"UpFrnt Web Development"}
             subHeading={"Freelance Web Developer"}
             fromDate={"2019"}
-            toDate={"present"}/>
-            <div className="experience-description">
-                <span className="resume-description-text">
-                    Building and deploying websites for local businesses.
-                </span>
-            </div>
+            toDate={"present"}
+            />
 
-            <div className="experience-description">
-                <span className="resume-description-text">
-                    -Working with the client from start to finish to bring their website dreams to reality.
+<div className="experience-description">
+          <span className="resume-description-text">
+            Building and deploying websites for small businesses.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Working with the client from conception to finish to ensure an efficient website that fits their business needs.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Received five-star Google review for excellent customer service and an exciting website.{" "}
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Utilize advanced SEO methods to increase client website traffic. Providing ongoing website maintenance as needed.
                 </span>
-                <br/>
-                <span className="resume-description-text">
-                    -Received positive, five star, Google review for excellent customer service and excellent work.
-                </span>
-                <br/>
-                <span className="resume-description-text">
-                    -Ongoing website maintenance as needed.
-                </span>
-                <br/>
-                <span className="resume-description-text">
-                    -Utilizing advnaced SEO methods to increase client website traffic.
-                </span>
+                        <br />
+                    </div>
+                </div>
             </div>,
-                <div className="resume-screen-container programming-skills-container" key="programming-skills">
-                    {programmingSkillsDetails.map((skill, index) => (
-                        <div className="skill-parent" key={index}>
-                            <div className="heading-bullet">
-                                <span>{skill.skill}</span>
-                                <div className="skill-percentage">
-                                    <div style={{width: skill.ratingPercentage + "%"}} className="active-percentage">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>,
+                                /*Programming Skills */
+            <div className="resume-screen-container programming-skills-container"
+            key="programming-skills">
+            {programmingSkillsDetails.map((skill, index) => (
+                <div className="skill-parent" key={index}>
+                    <div className="heading-bullet"></div>
+                        <span>{skill.skill}</span>
+                            <div className="skill-percentage">
+                                <div style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage-bar"
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>,
 
                 <div className="resume-screen-container" key="projects">
                     {projectDetails.map((projectDetails, index) => (
@@ -188,7 +200,7 @@ export default function Resume(props) {
                     heading="Gaming"
                     description="I'm not ashamed of my Fortnite obsession."
                     />
-                </div>
+                
              </div>,
     ];
 
@@ -214,7 +226,7 @@ export default function Resume(props) {
           >
               <img className="bullet-logo"
               src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-              alt="bullets"
+              alt="b"
               />
               <span className="bullet-label">{bullet.label}</span>
               </div>
@@ -244,9 +256,12 @@ export default function Resume(props) {
                             <div className="bullets">{getBullets()}</div>
                         </div>
                     </div>
-                    <div className="resume-bullets-details">{getResumeScreens()}</div>
+                    <div className="resume-bullet-details">{getResumeScreens()}</div>
                 </div>
             </div>
         </div>
     );
-}
+};
+
+export default Resume;
+
