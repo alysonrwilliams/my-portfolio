@@ -7,6 +7,11 @@ import "./Testimonial.css";
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
+import shape from "../../../src/assets/Testimonial/shape-bg.png";
+import nicole from "../../../src/assets/Testimonial/nicole.jpg";
+import demetrius from "../../../src/assets/Testimonial/demetrius.png";
+import chellyalex from "../../../src/assets/Testimonial/chellyalex.png";
+import bridget from "../../../src/assets/Testimonial/bridget.png";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
@@ -41,7 +46,7 @@ export default function Testimonial(props) {
 
   return (
     <div>
-      <ScreenHeading title={'Testimonial'} subHeading={'Positive Praise!'} />
+      <ScreenHeading title={'Testimonials'} subHeading={'Positive Praise!'} />
       <section className="testimonial-section" id={props.id || ''}>
         <div className="container">
           <div className="row">
@@ -77,7 +82,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                      <img src="img/testimonial/lady.png" alt="client"></img>
+                      <img src={demetrius} alt="demetrius"></img>
                       <h5>Demetrius W</h5>
                       <p>UpFrnt Web Developer </p>
                   </div>
@@ -112,7 +117,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                      <img src="img/testimonial/mike.png" alt="client"></img>
+                      <img src={nicole} alt="nicole"></img>
                       <h5>Nicole S</h5>
                       <p>Code Louisville Student </p>
                   </div>
@@ -125,7 +130,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                         <i className="fa fa-quote-left" />
-                        UpFrnt built our website and strengthened our business. Within the first week of the website launch we received offers for business partnerships and new customer inquiries. Our website is a platform for customers to connect with our farm, learn about our values and offerings, and shop!
+                        Alyson built our website and strengthened our business. Within the first week of the website launch we received offers for business partnerships and new customer inquiries. Our website is a platform for customers to connect with our farm, learn about our values and offerings, and shop!
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -147,7 +152,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                      <img src="img/testimonial/man.png" alt="client"></img>
+                      <img src={chellyalex} alt="alex and chelly"></img>
                       <h5>Chelly and Alex B</h5>
                       <p>Owners, High Five Farm </p>
                   </div>
@@ -160,7 +165,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                         <i className="fa fa-quote-left" />
-                        I needed a landing page for a project I’m working on and UpFrnt quoted me less than several other local developers. Their work was really nice and the page was done so fast. Highly recommend!
+                        I needed a landing page for a project I’m working on and Alyson quoted me less than several other local developers. Their work was really nice and the page was done so fast. Highly recommend!
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -182,7 +187,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                      <img src="img/testimonial/lady.png" alt="client"></img>
+                      <img src={bridget} alt="bridget"></img>
                       <h5>Bridget K</h5>
                       <p>Instructional Designer </p>
                   </div>
@@ -193,7 +198,7 @@ export default function Testimonial(props) {
         </div>
       </section>
       <div className="footer-image">
-          <img src="../../assets/Testimonial/shape-bg.png" alt="shape" />
+        <img src={shape} alt="shape" />
       </div>
     </div>
   );
