@@ -59,8 +59,9 @@ const ResumeHeading = (props) => {
         {skill: "Node JS", ratingPercentage: 70},
         {skill: "C#", ratingPercentage: 50},
         {skill: "HTML", ratingPercentage: 90},
-        {skill: "CSS", ratingPercentage: 75},
+        {skill: "CSS", ratingPercentage: 81},
         {skill: "Git", ratingPercentage: 85},
+        
     ];
 
     const projectDetails = [
@@ -88,12 +89,7 @@ const ResumeHeading = (props) => {
             description: "A clone of the famous Amazon website",
             subHeading: "Technologies Used: React JS",
         },
-        {
-            title: "UpFrnt Business Website",
-            duration: {fromDate: "2019", toDate: "2021"},
-            description: "A website for my freelance business, UpFrnt Web Development",
-            subHeading: "Technologies Used: HTML, CSS, Javascript, Bootstrap",
-        },
+     
     ];
 
     const resumeDetails = [
@@ -139,20 +135,21 @@ const ResumeHeading = (props) => {
 
 <div className="experience-description">
           <span className="resume-description-text">
-            Building and deploying websites for small businesses.
+          - I work with the client from conception to finish to ensure an efficient website that fits their business needs.
           </span>
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-            - Working with the client from conception to finish to ensure an efficient website that fits their business needs.
+            - I utlilize version control to share files with my business partner, giving me valuable Git and GitHub experience in a team setting.
           </span>
-          <br />
+          <br></br>
+          <br></br>
           <span className="resume-description-text">
-            - Received five-star Google review for excellent customer service and an exciting website.{" "}
+            - I impliment advanced SEO methods to increase client website traffic. Providing ongoing website maintenance as needed.
           </span>
-          <br />
+          <br /> <br></br>
           <span className="resume-description-text">
-            - Utilize advanced SEO methods to increase client website traffic. Providing ongoing website maintenance as needed.
+          - I received a five-star Google review for excellent customer service and an exciting website.{" "}
                 </span>
                         <br />
                     </div>
@@ -188,17 +185,20 @@ const ResumeHeading = (props) => {
                 </div>,
 
                 <div className="resume-screen-container" key="interests">
-                    <ResumeHeading 
-                    heading="Reading"
-                    description="From both fiction and nonfiction works by the late greats to current programming texts, reading is my lifelong hobby. I am passionate in my belief that reading enhances ones learning."
-                    />
+                   
                     <ResumeHeading 
                     heading="Donate Life Kentucky"
-                    description="In 2022, I donated 61% of my liver to someone who had waited on the transplant list for years without receiving the call. This experience changed my life and I will forever volunteer my time and resources to the Donate Life Campaign."
+                    description="In 2022, I donated 61% of my liver to someone in desperate need. I am now a Donate Life Ambassador and will forever lend my time and resources to this amazing campaign."
                     />
+
+                    <ResumeHeading 
+                    heading="SOS International"
+                    description="SOS is a Louisville, KY based nonprofit that collects unused medical supplies from local hospitals and ships them overseas. I volunteer with this organization regularly during events or as a part of sort groups and I am passionate about their mission."
+                    />
+
                     <ResumeHeading 
                     heading="Gaming"
-                    description="I'm not ashamed of my Fortnite obsession."
+                    description="I'm not ashamed of my Fortnite obsession!"
                     />
                 
              </div>,
