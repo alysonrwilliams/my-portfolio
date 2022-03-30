@@ -10,6 +10,7 @@ import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
 import "./ContactMe.css";
 
+
 export default function ContactMe(props) {
     let fadeInScreenHandler = (screen) => {
         if (screen.fadeInScreen !== props.id) return;
@@ -93,43 +94,31 @@ export default function ContactMe(props) {
           </div>
           <div className="back-form">
               <div className="img-back">
-                  <h4>Send Your Email Here!</h4>
+                  <h4>Please send an email or reach out on social media for all inquiries and opportunities! I look forward to chatting!
+                      <br></br>
+                      <br></br>
+                      ALYSONRWILLIAMS@GMAIL.COM
+                  </h4>
                   <img src={imgBack} alt="mail" />
               </div>
-              <form onSubmit={submitForm}>
-                  <p>{banner}</p>
-                  <label htmlFor="name">Name</label>
-                  <input type="text" 
-                  onChange={handleName}
-                  value={name}
-                  />
 
-                  <label htmlFor="email">Email</label>
-                  <input type="email" 
-                  onChange={handleEmail}
-                  value={email}
-                  />
 
-                  <label htmlFor="message">Message</label>
-                  <textarea type="text" 
-                  onChange={handleMessage}
-                  value={message}
-                  />
 
-            <div className="send-btn">
-              <button type="submit">
-                send
-                <i className="fa fa-paper-plane" />
-                {bool ? (
-                  <b className="load">
-                    <img src={load1} alt="not responding" />
-                  </b>
-                ) : (
-                  ""
-                )}
-              </button>
-            </div>
-              </form>
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
           </div>
       </div>
   </div>

@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: #718371;
+  text-align: center;
 }
 
 .central-form h2 {
@@ -24,6 +25,7 @@
 .back-form {
   max-width: 380px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .back-form .img-back {
