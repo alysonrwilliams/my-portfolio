@@ -149,7 +149,7 @@ const ResumeHeading = (props) => {
           </span>
           <br /> <br></br>
           <span className="resume-description-text">
-          - I received a five-star Google review for excellent customer service and an exciting website.{" "}
+          - I received multiple five-star Google reviews for excellent customer service and great websites.{" "}
                 </span>
                         <br />
                     </div>

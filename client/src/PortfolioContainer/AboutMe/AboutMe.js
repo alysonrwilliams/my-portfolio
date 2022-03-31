@@ -14,17 +14,17 @@ const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScr
 
 const SCREEN_CONSTANTS = {
     description:
-      "Front end web and mobile developer with background knowledge of JavaScript and React, along with a knack for building and launching full websites with the utmost efficiency. Strong problem solver with a diverse education, ranging from code bootcamps to a traditional university masters program.",
+      "Originally self-taught and later a boot-camp graduate, I am a developer particularly interested in the front-end with experience building, testing and launching full websites as well as providing site maintenance. I look forward to coding alongside a team of other talented developers with the goal of building amazing things together while working towards accessible tech for all.",
     highlights: {
       bullets: [
-        "Front End Web Development",
-        "Interactive Front End as per the design",
-        "React and React Native",
-        "Full Lifecycle Web Maintenance",
-        "Utilizing REST API",
-        "Problem Solving with Teams and Independently",
+        "A knack for front end web development",
+        "Full lifecycle web maintenance",
+        "Use of advanced SEO practices",
+        "Familiarity with several languanges including JS, React.Js, and C#",
+        "A fluid and efficient developer",
+        "Always the problem solver of the team",
       ],
-      heading: "Here are a Few Highlights:",
+      heading: "A Few Highlights:",
     },
   };
   const renderHighlight = () => {
@@ -39,7 +39,7 @@ const SCREEN_CONSTANTS = {
     return (
         <div className="about-me-container screen-container" id={props.id || ""}>
             <div className="about-me-parent">
-                <ScreenHeading title={'About Me'} subHeading ={'Why Choose Me?'} />
+                <ScreenHeading title={'About Me'} subHeading ={'Time for an Introduction!'} />
                 <div className="about-me-card">
                     <div className="about-me-profile"></div>
                     <div className="about-me-details">
