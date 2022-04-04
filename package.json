@@ -11,10 +11,8 @@
     "express": "^4.17.3",
     "nodemailer": "^6.7.3",
     "nodemon": "^2.0.15",
-    "react-jotform-embed": "^1.1.2",
     "react-toastify": "^7.0.4"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",

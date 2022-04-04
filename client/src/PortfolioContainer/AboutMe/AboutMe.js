@@ -14,17 +14,16 @@ const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScr
 
 const SCREEN_CONSTANTS = {
     description:
-      "Originally self-taught and later a boot-camp graduate, I am a developer particularly interested in the front-end with experience building, testing and launching full websites as well as providing site maintenance. I look forward to coding alongside a team of other talented developers with the goal of building amazing things together while working towards accessible tech for all.",
+      "Originally self-taught and later a boot-camp graduate, I am a developer particularly interested in the front-end with experience building, testing, and launching full websites as well as providing site maintenance. Outside of my freelance work, I enjoy sharpening my JavaScript skills by building apps, exploring articles, and participating in online developer communities. I look forward to coding alongside a team of other talented developers with the goal of building amazing things together while working towards accessible tech for all.",
     highlights: {
       bullets: [
         "A knack for front end web development",
-        "Full lifecycle web maintenance",
-        "Use of advanced SEO practices",
-        "Familiarity with several languanges including JS, React.Js, and C#",
-        "A fluid and efficient developer",
-        "Always the problem solver of the team",
+        "Fluid and efficient developer",
+        "The problem solver of the team",
+        "Full lifecycle website building and maintenance experience",
+        "Familiarity with several technologies including JavaScript, React.Js, C#, HTML, CSS, and more",
       ],
-      heading: "A Few Highlights:",
+      heading: "Takeaways:",
     },
   };
   const renderHighlight = () => {

@@ -66,27 +66,27 @@ const ResumeHeading = (props) => {
 
     const projectDetails = [
         {
-            title: "Personal Portfolio Website",
+            title: "Personal Portfolio Website (This Site!)",
             duration: {fromDate: "2022", toDate: "2022"},
-            description: "A personal portfolio site",
+            description: "",
             subHeading: "Technologies Used: React JS, Bootstrap",
         },
         {
-            title: "High Five Farm Business Website",
+            title: "High Five Farm Website (Freelance Client)",
             duration: {fromDate: "2019", toDate: "2022"},
-            description: "A well maintained full website for my client, High Five Farm, of Versailles Kentucky",
+            description: "www.highfivefarmky.com",
             subHeading: "Technologies Used: HTML, CSS, and JavaScript",
         },
         {
-            title: "Aly's Cosmic Scoops",
+            title: "Aly's Cosmic Scoops (Bootcamp Project)",
             duration: {fromDate: "2021", toDate: "2021"},
-            description: "A capstone project submitted to Code Louisville, the bootcamp from which I graduated.",
+            description: "https://alysonrwilliams.github.io/cosmicscoops/",
             subHeading: "Technologies Used: HTML, CSS, and Javascript",
         },
         {
             title: "Amazon Clone",
             duration: {fromDate: "2022", toDate: "2022"},
-            description: "A clone of the famous Amazon website",
+            description: "https://alysonrwilliams.github.io/amazon-clone/ *click amazon logo to launch*",
             subHeading: "Technologies Used: React JS",
         },
      
@@ -133,9 +133,14 @@ const ResumeHeading = (props) => {
             toDate={"present"}
             />
 
-<div className="experience-description">
+        <div className="experience-description">
           <span className="resume-description-text">
-          - I work with the client from conception to finish to ensure an efficient website that fits their business needs.
+          - I create eye-catching and user-friendly websites to generate web traffic and promote my clients' products and services
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+          - I handle all verbal and written communications between hosting companies, clients, and vendors.
           </span>
         </div>
         <div className="experience-description">
@@ -145,7 +150,7 @@ const ResumeHeading = (props) => {
           <br></br>
           <br></br>
           <span className="resume-description-text">
-            - I impliment advanced SEO methods to increase client website traffic. Providing ongoing website maintenance as needed.
+            - I providing ongoing website maintenance as needed.
           </span>
           <br /> <br></br>
           <span className="resume-description-text">
