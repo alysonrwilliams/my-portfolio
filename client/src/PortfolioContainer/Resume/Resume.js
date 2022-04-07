@@ -54,10 +54,10 @@ const ResumeHeading = (props) => {
     ];
 
     const programmingSkillsDetails = [
-        {skill: "JavaScript", ratingPercentage: 70},
-        {skill: "React JS", ratingPercentage: 70},
-        {skill: "Node JS", ratingPercentage: 70},
-        {skill: "C#", ratingPercentage: 50},
+        {skill: "JavaScript", ratingPercentage: 65},
+        {skill: "React JS", ratingPercentage: 65},
+        {skill: "Node JS", ratingPercentage: 60},
+        {skill: "C#", ratingPercentage: 25},
         {skill: "HTML", ratingPercentage: 90},
         {skill: "CSS", ratingPercentage: 81},
         {skill: "Git", ratingPercentage: 85},
